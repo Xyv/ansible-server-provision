@@ -1,23 +1,24 @@
 ---
 - name: Update apt cache if needed.
-  apt:
+  ansible.builtin.apt:
     update_cache: true
     cache_valid_time: 86400
 
 - name: Ensure /usr/local/bin exists.
-  file:
+  ansible.builtin.file:
     path: /usr/local/bin
     state: directory
-    mode: 0775
+    mode: "775"
 
 - name: Ensure auth.log file is present.
-  copy:
+  ansible.builtin.copy:
     dest: /var/log/auth.log
     content: ""
     force: false
+    mode: "640"
 
 - name: Ensure dependencies are installed.
-  apt:
+  ansible.builtin.apt:
     name:
       - curl
       - openssh-server
