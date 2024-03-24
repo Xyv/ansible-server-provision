@@ -1,4 +1,18 @@
 ---
+- name: Create a new regular user with sudo privileges
+  ansible.builtin.user:
+    name: "{{ created_username }}"
+    state: present
+    groups: sudo
+    append: true
+    create_home: true
+
+- name: Set authorized key for remote user
+  ansible.posix.authorized_key:
+    user: "{{ created_username }}"
+    state: present
+    key: "{{ lookup('ansible.builtin.file', '{{ ansible_ssh_private_key_file }}.pub') }}"
+
 - name: Update apt cache if needed.
   ansible.builtin.apt:
     update_cache: true
