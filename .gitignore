@@ -1,3 +1,5 @@
 config.yml
 inventory
 roles/geerlingguy.*
+.python-version
+.vscode/settings.json
