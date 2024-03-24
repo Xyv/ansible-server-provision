@@ -3,4 +3,4 @@
 - src: geerlingguy.firewall
 - src: geerlingguy.git
 - src: geerlingguy.pip
-- src: geerlingguy.docker_arm
+- src: geerlingguy.nfs
