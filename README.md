@@ -1,5 +1,8 @@
 # Raspberry Pi Development Ansible Playbook
 
+> [!TIP]
+> This playbook is based on the work of [Jeff Geerling's pi-dev-playbook](https://github.com/geerlingguy/pi-dev-playbook/).
+
 This playbook installs and configures most of the software I use on my Mac for web and software development. Some things in macOS are slightly difficult to automate, so I still have some manual installation steps, but at least it's all documented here.
 
 This is a work in progress, and is mostly a means for me to document my current Mac's setup. I'll be evolving this set of playbooks over time.
