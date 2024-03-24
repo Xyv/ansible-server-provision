@@ -42,4 +42,5 @@
       - libssl-dev
       - cron
       - dnsutils
+      - rsync
     state: present
