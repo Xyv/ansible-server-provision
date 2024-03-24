@@ -54,3 +54,10 @@
       tags: ['apps', 'gh']
 
   tasks: []
+
+# For client
+# Add nfs-common smbclient cifs-utils
+# Configure mount point in /etc/fstab
+# //192.168.110.17/data /media/NAS/data cifs noauto,iocharset=utf8,x-systemd.automount,uid=1000,gid=1000,forceuid,forcegid,credentials=/home/antoine/.creds/.diskstation_data,rw,vers=3.0 0 0
+
+# 192.168.110.5:/mnt/external/nfs_jellyfin /mnt/external/nfs_jellyfin nfs nfsvers=4,resvport 0 0
