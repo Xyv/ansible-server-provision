@@ -18,6 +18,16 @@
         file: tasks/init.yml
       tags: ['always']
 
+  # Setup name mapping when installing from apt
+  vars:
+    deb_architecture: {
+      "armv6l": "armhf",
+      "armv7l": "armhf",
+      "aarch64": "arm64",
+      "x86_64": "amd64",
+      "i386": "i386"
+    }
+
   roles:
     - role: geerlingguy.security
       tags: ['security', 'ssh']
@@ -31,7 +41,7 @@
     - role: geerlingguy.pip
       tags: ['pip']
 
-    - role: geerlingguy.docker_arm
+    - role: docker
       tags: ['docker']
 
     - role: geerlingguy.nfs
