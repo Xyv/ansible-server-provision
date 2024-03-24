@@ -25,6 +25,6 @@
       - openssh-client
       - libffi-dev
       - libssl-dev
-      - python-backports.ssl-match-hostname
       - cron
+      - dnsutils
     state: present
